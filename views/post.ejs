@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %> - Blog App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blog App</h1>
+            <nav>
+                <a href="/posts">Posts</a>
+                <% if(user){ %>
+                    <a href="/create-post">Create Post</a>
+                    <a href="/profile">Profile</a>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                <% } %>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post">
+            <h1><%= post.title %></h1>
+            <p><%= post.content %></p>
+        </div>
+
+        <hr>
+
+        <h2>Comments</h2>
+
+        <% comments.forEach(comment=> { %>
+            <div class="comment">
+                <p>
+                    <b><%= comment.author %></b>:
+                    <%= comment.text %>
+                </p>
+            </div>
+        <% }) %>
+
+        <% if(user){ %>
+        <form method="POST" action="/comment/<%= post._id %>">
+            <textarea name="text" placeholder="Add a comment..." required></textarea>
+            <button>Comment</button>
+        </form>
+        <% } %>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Blog App. Minimalist design.</p>
+        </div>
+    </footer>
+</body>
+</html>
