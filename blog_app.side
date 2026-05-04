@@ -1,0 +1,174 @@
+{
+  "id": "150cfe46-44f4-4d14-84a5-4b42f20a5ddd",
+  "version": "2.0",
+  "name": "TESTSELEN",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "e8235b05-57a6-4f84-b9f7-bbc267b65955",
+    "name": "ЛОКАЛ ХОСТ ТЕСТ",
+    "commands": [{
+      "id": "217110b3-7fc0-4743-a273-46beb6ed1940",
+      "comment": "",
+      "command": "open",
+      "target": "/posts",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f51e7a51-2a5e-49b9-b5b1-1fbec42ab424",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecc40341-a002-4f7a-a7ae-eace351bb090",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4010a9e-08fb-4087-896e-e3ed6ac389ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='/search']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"],
+        ["xpath=//form[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "124571bb-b90e-40f4-b8db-a4f6bfa6cc6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7cdc94e-44cf-4184-927a-404c7e24e20b",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d326177-2916-48b5-8114-27599430563c",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Максим"
+    }, {
+      "id": "327dbe1e-290b-471c-ab50-dc6190cb060c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ba904a4e-081f-4132-987e-8efd19c7478c",
+      "comment": "",
+      "command": "click",
+      "target": "css=footer > .container",
+      "targets": [
+        ["css=footer > .container", "css:finder"],
+        ["xpath=//footer/div", "xpath:position"],
+        ["xpath=//div[contains(.,'© 2023 Blog App. Minimalist design.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "641c23c0-0230-4c55-97f8-d4aff0140329",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Profile",
+      "targets": [
+        ["linkText=Profile", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/profile')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38cee46f-1963-4891-a43a-7dc3230b6fe0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create Post",
+      "targets": [
+        ["linkText=Create Post", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Create Post')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/create-post')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Create Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b709a0d-a7cc-4e48-b4c0-bbbde3c25350",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Posts",
+      "targets": [
+        ["linkText=Posts", "linkText"],
+        ["css=a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Posts')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/posts')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Posts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0141a089-0ef6-4781-8ac3-4e5a67d897dd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "01849b9f-f5f8-437f-b114-1fcc3ea253d2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e8235b05-57a6-4f84-b9f7-bbc267b65955"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
