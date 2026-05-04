@@ -2,10 +2,11 @@ from selenium.webdriver.common.by import By
 from .base_page import BasePage
 
 class LoginPage(BasePage):
-    # Локатори винесені в окремі змінні (вимога щодо зміни елементів)
     EMAIL_INPUT = (By.NAME, "email")
     PASS_INPUT = (By.NAME, "password")
     LOGIN_BTN = (By.XPATH, "//button[text()='Login']")
+    # ДОДАЙ ЦЕЙ РЯДОК:
+    LOGOUT_BUTTON = (By.XPATH, "//a[text()='Logout']") 
 
     def login(self, email, password):
         self.type(self.EMAIL_INPUT, email, "email")
