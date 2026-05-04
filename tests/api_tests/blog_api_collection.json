@@ -1,0 +1,60 @@
+{
+	"info": {
+		"name": "Blog App API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 201', function () { pm.response.to.have.status(201); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"api_test_user\", \"email\": \"api@test.com\", \"password\": \"string123\"}",
+					"options": { "raw": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:8000/register", "port": "8000", "path": ["register"] }
+			}
+		},
+		{
+			"name": "Login / Get Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+							"var jsonData = pm.response.json();",
+							"pm.environment.set('token', jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{ "key": "username", "value": "api@test.com", "type": "text" },
+						{ "key": "password", "value": "string123", "type": "text" }
+					]
+				},
+				"url": { "raw": "http://localhost:8000/token", "port": "8000", "path": ["token"] }
+			}
+		}
+	]
+}
